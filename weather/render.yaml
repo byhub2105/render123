@@ -6,7 +6,7 @@ services:
   - type: web
     name: myportal
     env: python
-    buildCommand: "./build.sh"
+    buildCommand: "bash build.sh"
     startCommand: "gunicorn weather.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
